@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Job Tracker App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Job Tracker</h1>
+
+    <div class="form">
+      <input type="text" id="company" placeholder="Company Name" />
+      <input type="text" id="role" placeholder="Job Role" />
+
+      <select id="status">
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Offer">Offer</option>
+      </select>
+
+      <button onclick="addJob()">Add Job</button>
+    </div>
+
+    <select id="filterStatus" onchange="filterJobs()">
+        <option value="All">All Jobs</option>
+        <option value="Applied">Applied</option>
+        <option value="Interview">Interview</option>
+        <option value="Rejected">Rejected</option>
+        <option value="Offer">Offer</option>
+    </select>
+
+    <ul id="jobList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
