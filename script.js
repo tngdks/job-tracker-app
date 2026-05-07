@@ -25,7 +25,7 @@ function addJob() {
   jobs.push(job);
 
   saveToStorage();
-  displayJobs();
+  filterJobs();
 
   document.getElementById("company").value = "";
   document.getElementById("role").value = "";
@@ -55,7 +55,7 @@ function editJob(id){
     job.status = newStatus.trim();
 
     saveToStorage();
-    displayJobs();
+    filterJobs();
 }
 
 //<----------------DISPLAY-------------------------------------
@@ -112,7 +112,7 @@ function deleteJob(id) {
   jobs = jobs.filter(job => job.id !== id);
 
   saveToStorage();
-  displayJobs();
+  filterJobs();
 }
 
 displayJobs();
